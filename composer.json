@@ -1,0 +1,46 @@
+{
+    "name": "omniship/tests",
+    "description": "Test components for Omniship, the multi-carrier shipping library for PHP.",
+    "keywords": [
+        "php", "werxe"
+    ],
+    "homepage": "https://werxe.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Werxe",
+            "email": "hello@werxe.com",
+            "homepage": "https://werxe.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0",
+        "mockery/mockery": "^0.9",
+        "friendsofphp/php-cs-fixer": "^2.0"
+    },
+    "autoload": {
+        "psr-4": { "Omniship\\Tests\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Omniship\\Tests\\Tests\\": "tests/" }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "component": "package",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "scripts": {
+        "cs": "php-cs-fixer fix src --rules=@PSR2 --verbose --diff --using-cache=no",
+        "test": "vendor/bin/phpunit --verbose"
+    },
+    "minimum-stability": "stable"
+}
